@@ -16,6 +16,9 @@ public class Startup {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        //KLUDGE: do configuaration here
+        
+        //Start talking to objects
         
     }
     
