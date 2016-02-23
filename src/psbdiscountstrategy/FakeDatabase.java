@@ -9,7 +9,7 @@ package psbdiscountstrategy;
  *
  * @author Phillip Bremer
  */
-public class FakeDatabase {
+public class FakeDatabase implements DatabaseStrategy {
     private Customer[] customers = {
         new Customer("100", "Billy James"),
         new Customer("200", "Sally Jean"),
@@ -21,6 +21,7 @@ public class FakeDatabase {
         new Product("33", "Men's Black Belt", 39.95, new NoDiscount())
     };
     
+    @Override
     public final Product findProductById(String prodId){
         //needs validation
         Product product = null;
@@ -33,6 +34,7 @@ public class FakeDatabase {
         return product;
     }
     
+    @Override
     public final Customer findCustomerById(String custId){
         //needs validation
         Customer customer = null;
