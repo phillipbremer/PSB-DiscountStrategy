@@ -18,7 +18,7 @@ public class Register {
     }
     
     public final void addItemToSale(String prodId, int qty){
-        
+        receipt.addItemToReceipt(prodId, qty);
     }
 
     public final Receipt getReceipt() {
