@@ -12,6 +12,7 @@ package psbdiscountstrategy;
 public class Register {
     private Receipt receipt;
     private String storeName;
+    private LineItem lineItem;
     
     public void startNewSale(String custId, DatabaseStrategy db){
         receipt = new Receipt(custId, db);
@@ -37,6 +38,10 @@ public class Register {
     public final void setStoreName(String storeName) {
         //needs validation
         this.storeName = storeName;
+    }
+    
+    public final void grandTotal(){
+        
     }
     
     public final void endSale(){

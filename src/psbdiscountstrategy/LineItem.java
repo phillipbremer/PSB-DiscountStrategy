@@ -36,5 +36,16 @@ public class LineItem {
         this.qty = qty;
     }
     
+    public final double getSubtotal(){
+        //start with this first before looping
+        double subtotal = qty * product.getUnitCost();
+        
+        return subtotal;
+    }
     
+    public final double getLineItemDiscount(){
+        double discount = 0; //placeholder
+        
+        return discount;
+    }
 }

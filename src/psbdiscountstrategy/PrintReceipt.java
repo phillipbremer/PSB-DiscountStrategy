@@ -10,11 +10,10 @@ package psbdiscountstrategy;
  * @author Phillip Bremer
  */
 public class PrintReceipt {
-    private Product prodName;
-    private Product prodId;
-    private Customer custName;
-    private Customer custId;
+    private Product product;
+    private Customer customer;
     private Receipt receipt;
+    private Register register;
     
     public final void writeReceipt(){
         //needs validation

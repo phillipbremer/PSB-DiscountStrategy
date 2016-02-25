@@ -36,6 +36,7 @@ public class Receipt {
         System.arraycopy(origArray, 0, tempArray, 0, origArray.length);
         tempArray[tempArray.length - 1] = item;
         origArray = tempArray;
+        lineItems = origArray;
     }
     
     public final DatabaseStrategy getDb() {
@@ -61,6 +62,9 @@ public class Receipt {
     }
 
     public final void setLineItems(LineItem[] lineItems) {
+        //needs validation
         this.lineItems = lineItems;
     }
+    
+    
 }
