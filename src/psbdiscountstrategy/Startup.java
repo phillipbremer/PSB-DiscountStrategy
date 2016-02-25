@@ -23,6 +23,10 @@ public class Startup {
         Register register = new Register();
         register.startNewSale("100", db);
         
+        //testing code
+        Customer customer = register.getReceipt().getCustomer();
+        System.out.println("Customer " + customer.getCustName() + 
+                " found and added to receipt.");
     }
     
 }
