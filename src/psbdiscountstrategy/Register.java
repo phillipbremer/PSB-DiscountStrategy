@@ -43,11 +43,11 @@ public class Register {
     }
     
     public final void grandTotal(double grandTotal){
-        //DO THE LOOP!... of some kind
+        //DO THE LOOP!... of some kind?
         grandTotal = lineItem.getGrandSubtotal();
     }
     
     public final void endSale(){
-        
+        print.printTheReceipt();
     }
 }
