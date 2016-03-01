@@ -36,6 +36,8 @@ public class Startup {
         for(LineItem item : items){
             System.out.println(item.getProduct().getProdName());
         }
+        
+        register.endSale();
     }
     
 }

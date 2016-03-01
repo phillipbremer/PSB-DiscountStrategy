@@ -12,7 +12,7 @@ package psbdiscountstrategy;
 public class Register {
     private Receipt receipt;
     private String storeName;
-    private LineItem lineItem;
+    private LineItem[] lineItem;
     private double grandTotal;
     private PrintReceipt print;
     
@@ -42,12 +42,21 @@ public class Register {
         this.storeName = storeName;
     }
     
-    public final void grandTotal(double grandTotal){
-        //DO THE LOOP!... of some kind?
-        grandTotal = lineItem.getGrandSubtotal();
-    }
+//    public final double getGrandTotal(){
+//        //DO THE LOOP!... of some kind?
+//        LineItem[] items = getReceipt().getLineItems();
+//        for(LineItem item : items){
+////            double total;
+////            double addTo;
+//            grandTotal = item.getGrandSubtotal();
+//        }
+//        return grandTotal;
+//    }
     
     public final void endSale(){
-        print.printTheReceipt();
+        print = new PrintReceipt();
+        print.printTheReceipt(receipt);
+//        print.writeHeading();
+//        print.writeReceipt();
     }
 }

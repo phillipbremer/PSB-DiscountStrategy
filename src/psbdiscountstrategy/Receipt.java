@@ -13,6 +13,7 @@ public class Receipt {
     private DatabaseStrategy db;
     private Customer customer;
     private LineItem[] lineItems;
+    private double grandTotal;
 
     public Receipt(String custId, DatabaseStrategy db) {
         setDb(db);
@@ -66,5 +67,14 @@ public class Receipt {
         this.lineItems = lineItems;
     }
     
-    
+    public final double getGrandTotal(){
+        //DO THE LOOP!... of some kind?
+        LineItem[] items = getLineItems();
+        for(LineItem item : items){
+//            double total;
+//            double addTo;
+            grandTotal = item.getGrandSubtotal();
+        }
+        return grandTotal;
+    }
 }
