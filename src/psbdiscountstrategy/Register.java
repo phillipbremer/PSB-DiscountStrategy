@@ -13,6 +13,8 @@ public class Register {
     private Receipt receipt;
     private String storeName;
     private LineItem lineItem;
+    private double grandTotal;
+    private PrintReceipt print;
     
     public void startNewSale(String custId, DatabaseStrategy db){
         receipt = new Receipt(custId, db);
@@ -40,8 +42,9 @@ public class Register {
         this.storeName = storeName;
     }
     
-    public final void grandTotal(){
-        
+    public final void grandTotal(double grandTotal){
+        //DO THE LOOP!... of some kind
+        grandTotal = lineItem.getGrandSubtotal();
     }
     
     public final void endSale(){

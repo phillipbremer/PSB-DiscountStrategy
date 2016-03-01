@@ -10,10 +10,9 @@ package psbdiscountstrategy;
  * @author Phillip Bremer
  */
 public class PrintReceipt {
-    private Product product;
-    private Customer customer;
-    private Receipt receipt;
     private Register register;
+    private Receipt receipt;
+    private LineItem[] lineItems;
     
     public final void writeReceipt(){
         //needs validation
