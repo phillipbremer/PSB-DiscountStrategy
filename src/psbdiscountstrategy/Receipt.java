@@ -66,15 +66,29 @@ public class Receipt {
         //needs validation
         this.lineItems = lineItems;
     }
+
+    public final double getGrandTotal() {
+        return grandTotal;
+    }
+
+    public final void setGrandTotal(double grandTotal) {
+        this.grandTotal = grandTotal;
+    }
     
-    public final double getGrandTotal(){
-        //DO THE LOOP!... of some kind?
-        LineItem[] items = getLineItems();
-        for(LineItem item : items){
-//            double total;
-//            double addTo;
-            grandTotal = item.getGrandSubtotal();
+    public final double getSavings(){
+        double discount = 0;
+        for(LineItem item : lineItems){
+            discount += item.getLineItemDiscount();
         }
+        return discount;
+    }
+    
+    public final double getGrandestTotal(){
+        grandTotal = 0.00;
+        for(LineItem item : lineItems){
+            grandTotal += item.getGrandSubtotal();
+        }
+        
         return grandTotal;
     }
 }
