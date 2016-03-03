@@ -14,7 +14,7 @@ public class Register {
     private String storeName;
     private LineItem[] lineItem;
     private double grandTotal;
-    private PrintReceipt print;
+    private PrintReceiptConsole print;
     
     public void startNewSale(String custId, DatabaseStrategy db){
         receipt = new Receipt(custId, db);
@@ -54,7 +54,7 @@ public class Register {
 //    }
     
     public final void endSale(){
-        print = new PrintReceipt();
+        print = new PrintReceiptConsole();
         print.printTheReceipt(receipt);
 //        print.writeHeading();
 //        print.writeReceipt();

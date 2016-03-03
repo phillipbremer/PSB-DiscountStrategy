@@ -13,7 +13,7 @@ import java.util.Date;
  *
  * @author Phillip Bremer
  */
-public class PrintReceipt {
+public class PrintReceiptConsole implements OutputStrategy{
 //    private Register register;
 //    private Receipt receipt;
 //    private LineItem[] lineItems;
@@ -47,9 +47,10 @@ public class PrintReceipt {
         
         System.out.println("Grand total: $" + receipt.getGrandestTotal());
         System.out.println("Total saved today: $" + receipt.getSavings());
-     
+        System.out.println("Thank you for shopping at Kohl's");
     }
     
+    @Override
     public final void printTheReceipt(Receipt receipt){
         writeHeading(receipt);
         writeReceipt(receipt);

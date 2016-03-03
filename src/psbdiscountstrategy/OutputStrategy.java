@@ -11,5 +11,5 @@ package psbdiscountstrategy;
  */
 public interface OutputStrategy {
     //so I can choose between console and a GUI output
-    
+    public abstract void printTheReceipt(Receipt receipt);
 }
