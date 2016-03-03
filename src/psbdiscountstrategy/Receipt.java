@@ -76,7 +76,7 @@ public class Receipt {
     }
     
     public final double getSavings(){
-        double discount = 0;
+        double discount = 0.00;
         for(LineItem item : lineItems){
             discount += item.getLineItemDiscount();
         }
@@ -88,7 +88,6 @@ public class Receipt {
         for(LineItem item : lineItems){
             grandTotal += item.getGrandSubtotal();
         }
-        
         return grandTotal;
     }
 }

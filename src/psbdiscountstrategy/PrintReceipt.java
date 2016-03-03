@@ -44,14 +44,9 @@ public class PrintReceipt {
                 );
             System.out.println("");
         }
-        for(LineItem item : items){
-//            double total;
-//            double addTo;
-            
-        }
         
-        System.out.println("Grand total: " + receipt.getGrandTotal());
-        System.out.println();
+        System.out.println("Grand total: $" + receipt.getGrandestTotal());
+        System.out.println("Total saved today: $" + receipt.getSavings());
      
     }
     
